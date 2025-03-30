@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const swaggerUI = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
 const path = require('path');
-
+require('dotenv').config();
 const app = express();
 
 // Middlewares
@@ -50,7 +50,7 @@ const swaggerSpec = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
 // Rutas
-// app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/autores', require('./routes/autorRoutes'));
 app.use('/api/libros', require('./routes/libroRoutes'));
 // Agrega más rutas según necesites
 

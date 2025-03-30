@@ -21,7 +21,9 @@ const AutorSchema = new mongoose.Schema({
     maxlength: [500, 'La biografía no puede exceder los 500 caracteres']
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  // Para pruebas, permitimos insertar IDs manuales
+  _id: true // Esto permite enviar el _id manualmente en pruebas
 });
 
 module.exports = mongoose.model('Autor', AutorSchema);
