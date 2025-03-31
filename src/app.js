@@ -10,7 +10,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json());
-console.log(process.env.MONGODB_URI)
+
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -52,6 +52,7 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 // Rutas
 app.use('/api/autores', require('./routes/autorRoutes'));
 app.use('/api/libros', require('./routes/libroRoutes'));
+app.use('/api/auth/register', require('./routes/authRoutes'));
 // Agrega más rutas según necesites
 
 // Manejador de errores

@@ -19,7 +19,7 @@ const autenticar = require('../middlewares/authMiddleware');
  *               items:
  *                 $ref: '#/components/schemas/Libro'
  */
-router.get('/', libroController.obtenerLibros);
+router.get('/', autenticar, libroController.obtenerLibros);
 
 /**
  * @swagger
@@ -41,7 +41,7 @@ router.get('/', libroController.obtenerLibros);
  *       400:
  *         description: Error en la solicitud
  */
-router.post('/', libroController.crearLibro);
+router.post('/', autenticar, libroController.crearLibro);
 
 /**
  * @swagger
@@ -66,7 +66,7 @@ router.post('/', libroController.crearLibro);
  *       404:
  *         description: Libro no encontrado
  */
-router.get('/:id', libroController.obtenerLibro);
+router.get('/:id', autenticar, libroController.obtenerLibro);
 
 /**
  * @swagger
@@ -97,7 +97,7 @@ router.get('/:id', libroController.obtenerLibro);
  *       404:
  *         description: Libro no encontrado
  */
-router.put('/:id', libroController.actualizarLibro);
+router.put('/:id', autenticar, libroController.actualizarLibro);
 
 /**
  * @swagger

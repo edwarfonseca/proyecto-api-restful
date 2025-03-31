@@ -19,7 +19,7 @@ const autenticar = require('../middlewares/authMiddleware');
  *               items:
  *                 $ref: '#/components/schemas/Autor'
  */
-router.get('/', autorController.obtenerAutores);
+router.get('/', autenticar, autorController.obtenerAutores);
 
 /**
  * @swagger
@@ -41,7 +41,7 @@ router.get('/', autorController.obtenerAutores);
  *       400:
  *         description: Error en la solicitud
  */
-router.post('/', autorController.crearAutor);
+router.post('/', autenticar, autorController.crearAutor);
 
 /**
  * @swagger
@@ -66,7 +66,7 @@ router.post('/', autorController.crearAutor);
  *       404:
  *         description: Autor no encontrado
  */
-router.get('/:id', autorController.obtenerAutor);
+router.get('/:id', autenticar, autorController.obtenerAutor);
 
 /**
  * @swagger
@@ -97,7 +97,7 @@ router.get('/:id', autorController.obtenerAutor);
  *       404:
  *         description: Autor no encontrado
  */
-router.put('/:id', autorController.actualizarAutor);
+router.put('/:id', autenticar, autorController.actualizarAutor);
 
 /**
  * @swagger
@@ -120,6 +120,6 @@ router.put('/:id', autorController.actualizarAutor);
  *       404:
  *         description: Autor no encontrado
  */
-router.delete('/:id', autorController.eliminarAutor);
+router.delete('/:id', autenticar, autorController.eliminarAutor);
 
 module.exports = router;
