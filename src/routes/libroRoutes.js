@@ -97,7 +97,7 @@ router.get('/:id', libroController.obtenerLibro);
  *       404:
  *         description: Libro no encontrado
  */
-router.put('/:id', autenticar, libroController.actualizarLibro);
+router.put('/:id', libroController.actualizarLibro);
 
 /**
  * @swagger
