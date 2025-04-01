@@ -3,9 +3,8 @@
 API desarrollada para el taller de la Universidad Pedagógica y Tecnológica de Colombia.
 
 ## Integrantes del grupo
-- [Nombre 1]
-- [Nombre 2]
-- [Nombre 3]
+- Edwar Esteban Fonseca Jimenez
+
 
 ## Requisitos
 - Node.js 14+
@@ -16,7 +15,7 @@ API desarrollada para el taller de la Universidad Pedagógica y Tecnológica de 
 1. Clonar el repositorio
 2. Instalar dependencias: `npm install`
 3. Configurar variables de entorno en `.env`
-4. Iniciar servidor: `npm run dev`
+4. Iniciar servidor: `node src/server.js`
 
 ## Endpoints
 
@@ -28,13 +27,19 @@ La API cuenta con los siguientes endpoints:
 - `PUT /api/libros/:id` - Actualizar un libro (requiere autenticación)
 - `DELETE /api/libros/:id` - Eliminar un libro (requiere autenticación)
 
+- - `GET /api/autores` - Obtener todos los libros
+- `POST /api/autores` - Crear un nuevo libro (requiere autenticación)
+- `GET /api/autores/:id` - Obtener un libro por ID
+- `PUT /api/autores/:id` - Actualizar un libro (requiere autenticación)
+- `DELETE /api/autores/:id` - Eliminar un libro (requiere autenticación)
+
 ## Documentación con Swagger
 
 Accede a la documentación interactiva en: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 ## Despliegue en la nube
 
-La API está desplegada en: [URL del despliegue]
+La API está desplegada en RENDER: https://proyecto-api-restful.onrender.com
 
 ## Consideraciones
 - Todos los endpoints de creación, actualización y eliminación requieren autenticación mediante JWT
