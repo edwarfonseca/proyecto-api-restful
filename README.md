@@ -12,7 +12,7 @@ API desarrollada para el taller de la Universidad Pedagógica y Tecnológica de 
 - NPM o Yarn
 
 ## Instalación
-1. Clonar el repositorio
+1. Clonar el repositorio `(https://github.com/edwarfonseca/proyecto-api-restful.git)`
 2. Instalar dependencias: `npm install`
 3. Configurar variables de entorno en `.env`
 4. Iniciar servidor: `node src/server.js`
