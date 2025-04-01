@@ -27,11 +27,11 @@ La API cuenta con los siguientes endpoints:
 - `PUT /api/libros/:id` - Actualizar un libro (requiere autenticación)
 - `DELETE /api/libros/:id` - Eliminar un libro (requiere autenticación)
 
-- - `GET /api/autores` - Obtener todos los libros
-- `POST /api/autores` - Crear un nuevo libro (requiere autenticación)
-- `GET /api/autores/:id` - Obtener un libro por ID
-- `PUT /api/autores/:id` - Actualizar un libro (requiere autenticación)
-- `DELETE /api/autores/:id` - Eliminar un libro (requiere autenticación)
+- - `GET /api/autores` - Obtener todos los autores
+- `POST /api/autores` - Crear un nuevo autor (requiere autenticación)
+- `GET /api/autores/:id` - Obtener un autores por ID
+- `PUT /api/autores/:id` - Actualizar un autore (requiere autenticación)
+- `DELETE /api/autores/:id` - Eliminar un autore (requiere autenticación)
 
 ## Documentación con Swagger
 
